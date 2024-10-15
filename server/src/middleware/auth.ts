@@ -1,11 +1,14 @@
-import { Request, Response, NextFunction } from 'express';
-import jwt from 'jsonwebtoken';
+import { Request, Response, NextFunction } from "express";
+import jwt from "jsonwebtoken";
 
 interface JwtPayload {
   username: string;
 }
-
-export const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
+export const authenticateToken = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   // TODO: verify the token exists and add the user data to the request object
   // get the authorization header from the request
   const authHeader = req.headers.authorization;
@@ -16,7 +19,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
     const token = authHeader.split(" ")[1];
 
     // get the secret key from the env
-    const secretKey = process.env.JWT_SECRET_KEY || '';
+    const secretKey = process.env.JWT_SECRET_KEY || "";
 
     // verify the JWT token
     jwt.verify(token, secretKey, (err, user) => {
@@ -25,7 +28,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
       }
 
       req.user = user as JwtPayload;
-      return next() // call the next middleware function
+      return next(); // call the next middleware function
     });
   }
 };
