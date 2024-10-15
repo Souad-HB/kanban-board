@@ -5,7 +5,6 @@ import bcrypt from "bcrypt";
 
 export const login = async (req: Request, res: Response) => {
   // TODO: If the user exists and the password is correct, return a JWT token
-
   // destructure the req.body
   const { username, password } = req.body;
 

@@ -14,7 +14,6 @@ const login = async (userInfo: UserLogin) => {
     });
 
     const data = await response.json();
-
     // throw an error if the response is not ok
     if (!response.ok) {
       throw new Error("User information not retrieved, check network tab!");
