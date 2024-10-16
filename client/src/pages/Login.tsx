@@ -58,9 +58,7 @@ const Login = () => {
           onChange={handleChange}
         />
         <button type="submit">Submit Form</button>
-        {error && (
-          <p style={{ color: "red"}}>{error}</p>
-        )}
+        {error && <p style={{ fontWeight: "bolder" }}>{error}</p>}
       </form>
     </div>
   );
