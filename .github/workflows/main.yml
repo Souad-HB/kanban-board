@@ -1,4 +1,4 @@
-name: DB seeding
+name: seed db
 on:
   push:
     branches:
