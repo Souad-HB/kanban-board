@@ -29,6 +29,9 @@ For someone contributing to this application:
 ## Usage
 
 To use the Kanban board application, start by navigating to the login page and entering your valid username and password. Once authenticated with a JSON Web Token (JWT), you will be redirected to the main Kanban board where you can create, update, and manage tasks across different columns such as "To Do," "In Progress," and "Done." If invalid login credentials are entered, an error message: "Invalid username or password" is displayed. The JWT is securely stored in local storage, allowing for authenticated access to the board in subsequent sessions. When you log out, you are then redirected to the login page. Additionally, after a period of inactivity, the session will expire, and you will need to log in again to continue managing your tasks.
+To test this application, use the following credentials: 
+username: JollyGuru
+password: password
 
 The below screenshot represents the homepage when the user is not logged in:
 
